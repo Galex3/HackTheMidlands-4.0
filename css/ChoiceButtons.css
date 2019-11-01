@@ -1,0 +1,44 @@
+.button {
+  color: white;
+  padding: 20px 5px 20px 5px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 15px;
+	margin-left: 5%;
+	margin-right: 5%;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+	display: block;
+	width: 90%;
+}
+.button1 {
+ background-color: #555555;
+  color: white;
+  border: 2px solid #555555;
+}
+
+.button1:hover {
+ 	background-color: white;
+  color: #555555;
+}
+.button2 {
+  background-color: #555555;
+  color: white;
+  border: 2px solid #555555;
+}
+
+.button2:hover {
+  background-color: white;
+  color: #555555;
+}
+	.button3 {
+  background-color: #555555;
+  color: white;
+  border: 2px solid #555555;
+}
+
+.button3:hover {
+  background-color: white;
+  color: #555555;
+}

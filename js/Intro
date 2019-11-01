@@ -1,0 +1,20 @@
+var homeTown = '';
+var king = '';
+var bountyHunter = '';
+var town2 = '';
+var captain = '';
+var fireElem = '';
+var weapon = '';
+var armour = '';
+var transportation = '';
+var isAlly = false;
+
+function nameSet()
+{ //code will change to accept names from a function that compiles decisions from clients.
+  homeTown = window.prompt("Choose a name for a city");
+  king = window.prompt("Choose a name for a king");
+  bountyHunter = window.prompt("Choose a name");
+  town2 = window.prompt("Choose a name for another city");
+  captain = window.prompt("Choose a pirate name");
+  fireElem = window.prompt("Choose villain name");
+}
