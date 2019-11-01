@@ -1,0 +1,118 @@
+function c3e1(){
+					document.getElementById("text").innerHTML="You are approaching the gates of "+town2+", your smile fades as you notice that the gates are wide open with no guards. Your suspicions are confirmed when you enter the village to find it under pirate control. They have forced the entire village to stop using the internet so that they can torrent in peace."
+					document.getElementById("button1").innerText= "I have to save this village!";
+					document.getElementById("button2").innerText= "I just gotta get directions then I’m outta here";
+					document.getElementById("button3").innerText= "I wonder if they’re still recruiting";
+					document.getElementById("button1").removeEventListener("click", c3e1);
+					document.getElementById("button1").addEventListener("click", c3e2);
+					document.getElementById("button2").removeEventListener("click", c3e1);
+					document.getElementById("button2").addEventListener("click", c3e2);
+					document.getElementById("button3").removeEventListener("click", c3e1);
+					document.getElementById("button3").addEventListener("click", c3e2);
+				}
+
+				function c3e2(){
+					document.getElementById("text").innerHTML= "The scouts spotted your approach, captain "+captain+" wishes to speak to you!” You follow the two pirates into a makeshift arena where the captain was waiting for you. “Welcome to the pirate bay! Why did you come?"
+					document.getElementById("button1").innerText= "Do you know which direction the Bug is in? Lives in a giant volcano, source of all evil and bringer of frustration";
+					document.getElementById("button2").innerText= "I demand you leave this village before I have to take matters into my own hands.";
+					document.getElementById("button3").innerText= "I don’t know, I’m just following the narrator really.";
+					document.getElementById("button1").removeEventListener("click", c3e2);
+					document.getElementById("button1").addEventListener("click", c3e3);
+					document.getElementById("button2").removeEventListener("click", c3e2);
+					document.getElementById("button2").addEventListener("click", c3e3);
+					document.getElementById("button3").removeEventListener("click", c3e2);
+					document.getElementById("button3").addEventListener("click", c3e3);
+				}
+
+				function c3e3(){
+					document.getElementById("text").innerHTML="Captain "+captain+" strokes his long beard as he stands up while giving you a menacing look “You see, the only way you’ll be getting what you want is if you can defeat me!” You..."
+					document.getElementById("button1").innerText= "Accept the duel";
+					document.getElementById("button2").innerText= "Start singing the spongebob theme song";
+					document.getElementById("button3").innerText= "Let the bounty hunter take care of it";
+					document.getElementById("button1").removeEventListener("click", c3e3);
+					document.getElementById("button1").addEventListener("click", c3e4);
+					document.getElementById("button2").removeEventListener("click", c3e3);
+					document.getElementById("button2").addEventListener("click", c3T1_1);
+					document.getElementById("button3").removeEventListener("click", c3e3);
+					document.getElementById("button3").addEventListener("click", c3T1_2);
+				}
+
+				function c3T1_1 (){
+					document.getElementById("text").innerHTML="Captain "+captain+" is shocked at first but as you continue singing, the captain and his crew join you in song as you all dance and sing. The pirate crew applaud you and promise to leave the village alone. Good thinking there, everyone knows all pirates are fans of spongebob."
+					document.getElementById("button1").innerText= "Next";
+          document.getElementById("button2").innerText= "N/A";
+          document.getElementById("button3").innerText= "N/A";
+					document.getElementById("button1").removeEventListener("click", c3T1_1);
+					document.getElementById("button1").addEventListener("click", c3e5);
+				}
+
+				function c3T1_2 (){
+					document.getElementById("text").innerHTML="The bounty hunter impresses the pirate with his sick meme collection, convincing the pirate to leave the village in peace. the bounty hunter then bids you farewell, deciding to spend their time in the village to help rebuild. You say your goodbyes as you ask around for a guide."
+					document.getElementById("button1").innerText= "Next";
+          document.getElementById("button2").innerText= "N/A";
+          document.getElementById("button3").innerText= "N/A";
+					document.getElementById("button1").removeEventListener("click", c3T1_2);
+					document.getElementById("button1").addEventListener("click", c3e5);
+				}
+
+				function c3e4(){
+					document.getElementById("text").innerHTML="The pirate challenges you to a game of rock, paper, scissors. “I have gained my role by being the undefeated champion! I always use rock and I have never lost a game!” You get ready to play, the answer is obvious after all."
+					document.getElementById("button1").innerText= "You play rock";
+					document.getElementById("button2").innerText= "You play paper";
+					document.getElementById("button3").innerText= "You play scissors";
+					document.getElementById("button1").removeEventListener("click", c3e4);
+					document.getElementById("button1").addEventListener("click", c3T2_1);
+					document.getElementById("button2").removeEventListener("click", c3e4);
+					document.getElementById("button2").addEventListener("click", c3T2_2);
+					document.getElementById("button3").removeEventListener("click", c3e4);
+					document.getElementById("button3").addEventListener("click", c3T2_2);
+				}
+
+				function c3T2_1 (){
+					document.getElementById("text").innerHTML="You both play rock and end up tieing, the pirate is so shocked that he didn’t win he decides to leave the village to practice his skills. He promises he will be back for a rematch one day. You have saved the village but gained yourself an arch enemy. Hooray?"
+					document.getElementById("button1").innerText= "Next";
+          document.getElementById("button2").innerText= "N/A";
+          document.getElementById("button3").innerText= "N/A";
+					document.getElementById("button1").removeEventListener("click", c3T2_1);
+					document.getElementById("button1").addEventListener("click", c3e5);
+				}
+
+				function c3T2_2 (){
+					document.getElementById("text").innerHTML="You play paper and defeat the champion of rock, paper, scissors. Congratulations! The sore loser that he is, the pirate vows revenge and promises to battle for the title again one day. You have saved the village but gained yourself an arch enemy. Hooray?"
+					document.getElementById("button1").innerText= "Next";
+          document.getElementById("button2").innerText= "N/A";
+          document.getElementById("button3").innerText= "N/A";
+					document.getElementById("button1").removeEventListener("click", c3T2_2);
+					document.getElementById("button1").addEventListener("click", c3e5);
+				}
+        
+        function c3T2_3 (){
+					document.getElementById("text").innerHTML="Unsurprisingly, you have lost to Captain "+captain+" letting him keep his title as champion. The captain laughs at you and decides to leave the village anyways. “Find me when you’re stronger.” You failed the task successfully! The village is freed!"
+					document.getElementById("button1").innerText= "Next";
+          document.getElementById("button2").innerText= "N/A";
+          document.getElementById("button3").innerText= "N/A";
+					document.getElementById("button1").removeEventListener("click", c3T2_3);
+					document.getElementById("button1").addEventListener("click", c3e5);
+				}
+
+				function c3e5 (){
+					document.getElementById("text").innerHTML="You find a guide to show you the way to the volcano, he takes your phone and downloads google maps for you. You get ready to leave as the villagers cheer you on and promise to sing songs in your glory. Again you set on the path."
+					document.getElementById("button1").innerText= "Next";
+          document.getElementById("button2").innerText= "N/A";
+          document.getElementById("button3").innerText= "N/A";
+					document.getElementById("button1").removeEventListener("click", c3e5);
+					document.getElementById("button1").addEventListener("click", c3e6);
+				}
+
+				function c3e6 (){
+					document.getElementById("text").innerHTML="You are in a seemingly hellish landscape with ash raining from the sky and lava all around you. You are close to the lair, you can feel it (plus there’s a giant volcano ahead of you). You put away your phone and as you look up you see some docks stationed in a river of lava. Standing in front of it is a fire elemental."
+					document.getElementById("button1").innerText= "Next";
+          document.getElementById("button2").innerText= "N/A";
+          document.getElementById("button3").innerText= "N/A";
+					document.getElementById("button1").removeEventListener("click", c3e6);
+					document.getElementById("button1").addEventListener("click", c4t1);
+				}
+        
+        function c4t1(){
+          document.getElementById("text").innerHTML="yeet";
+        }

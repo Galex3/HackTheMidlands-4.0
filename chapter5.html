@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/ChoiceButtons.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+      body {
+        overflow-x: hidden;
+      }
+      .verticalRow {
+        height: 100vh;
+        overflow-y: scroll;
+        border-style: solid;
+        border-color: #555555;
+        border-right-style: none;
+        background-color: #b8b8b8;
+      }
+      .horizontalRow {
+        padding-left: 25px;
+        padding-right: 25px;
+        border-style: solid;
+        border-color: #555555;
+        margin-left: 15px;
+        background-color: #b8b8b8;
+      }
+      #art {
+        background-size: 100% 378px;
+        background-repeat: no-repeat;
+        height: 378px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-2 verticalRow"><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p><p>Users</p></div>
+        <div class="row flex-grow-1">
+          <div class="col-xl-12 horizontalRow" id="art"></div>
+          <div class="col-xl-12 horizontalRow" style="border-top-style: none; border-bottom-style: none; text-align: center;" id="text"><p>Once upon a time in a land far far away, there was a kingdom that was cursed with lag.<br /> It all started when a monster known as ‘Bug’ created its lair in the molten volcano.</p></div>
+          <div class="col-xl-12 horizontalRow">
+            <button class="button button1" id="button1">Next</button>
+            <button class="button button2" id="button2">Next</button>
+            <button class="button button3" id="button3">Next</button>
+          </div>
+        </div>
+      </div>
+			<script>
+				var homeTown = '';
+				var king = '';
+				var bountyHunter = '';
+				var town2 = '';
+				var captain = '';
+				var fireElem = '';
+				var weapon = '';
+				var armour = '';
+				var transportation = '';
+				var isAlly = false;
+
+
+				document.getElementById("button1").addEventListener("click", c5e1);
+				document.getElementById("button2").addEventListener("click", c5e1);
+				document.getElementById("button3").addEventListener("click", c5e1);
+        document.getElementById("art").style.backgroundImage = "url(img/test.jpg)";
+
+
+				function c5e1(){
+					// change text based on Elmaan's response
+          document.getElementById("text").innerHTML= "You arrive to a giant doorway carved into the side of the volcano, in front of it stands a man in a long robe. Standing before you is Gandalf and he slams down his staff yelling “YOU SHALL NOT PASS!” You must quickly think of something before this game is taken down due to copyright!";
+					document.getElementById("button1").innerText= "“We takesies the precious!”";
+					document.getElementById("button2").innerText= "“Harry Potter is better”";
+					document.getElementById("button3").innerText= "You pass";
+					document.getElementById("button1").removeEventListener("click", c5e1);
+					document.getElementById("button1").addEventListener("click", c5e1t1);
+					document.getElementById("button2").removeEventListener("click", c5e1);
+					document.getElementById("button2").addEventListener("click", c5e1t2);
+					document.getElementById("button3").removeEventListener("click", c5e1);
+					document.getElementById("button3").addEventListener("click", c5e1t3);
+				}
+
+        function c5e1t1() {
+          document.getElementById("text").innerHTML = "Gandalf nods to you as he steps aside “Well referenced, you may pass.” Your pop culture knowledge has served you well, it is time to end this!";
+          document.getElementById("button1").innerText= "Next";
+					document.getElementById("button2").innerText= "N/A";
+					document.getElementById("button3").innerText= "N/A";
+          document.getElementById("button1").removeEventListener("click", c5e1t1);
+					document.getElementById("button1").addEventListener("click", c5e2);
+          document.getElementById("button2").removeEventListener("click", c5e1t2);
+					document.getElementById("button2").addEventListener("click", c5e2);
+          document.getElementById("button3").removeEventListener("click", c5e1t3);
+					document.getElementById("button3").addEventListener("click", c5e2);
+          document.getElementById("button2").setAttribute("disabled","disabled");
+          document.getElementById("button2").style.cursor = "not-allowed";
+          document.getElementById("button3").setAttribute("disabled","disabled");
+          document.getElementById("button3").style.cursor = "not-allowed";
+        }
+
+        function c5e1t2() {
+          document.getElementById("text").innerHTML = "Gandalf shakes his head as he walks away, your words have clearly hurt him. Moving aside from the fact you hurt Gandalf’s feelings, you are now free to fight the Bug!";
+          document.getElementById("button1").innerText= "Next";
+					document.getElementById("button2").innerText= "N/A";
+					document.getElementById("button3").innerText= "N/A";
+          document.getElementById("button1").removeEventListener("click", c5e1t1);
+					document.getElementById("button1").addEventListener("click", c5e2);
+          document.getElementById("button2").removeEventListener("click", c5e1t2);
+					document.getElementById("button2").addEventListener("click", c5e2);
+          document.getElementById("button3").removeEventListener("click", c5e1t3);
+					document.getElementById("button3").addEventListener("click", c5e2);
+          document.getElementById("button2").setAttribute("disabled","disabled");
+          document.getElementById("button2").style.cursor = "not-allowed";
+          document.getElementById("button3").setAttribute("disabled","disabled");
+          document.getElementById("button3").style.cursor = "not-allowed";
+        }
+
+        function c5e1t3() {
+          document.getElementById("text").innerHTML = "Gandalf stands in place as he stares at you menacingly, you simply walk past him and open the door. “Hey I said you can’t pass!” You continue on and enter the lair of the Bug, that was easier than expected.";
+          document.getElementById("button1").innerText= "Next";
+					document.getElementById("button2").innerText= "N/A";
+					document.getElementById("button3").innerText= "N/A";
+          document.getElementById("button1").removeEventListener("click", c5e1t1);
+					document.getElementById("button1").addEventListener("click", c5e2);
+          document.getElementById("button2").removeEventListener("click", c5e1t2);
+					document.getElementById("button2").addEventListener("click", c5e2);
+          document.getElementById("button3").removeEventListener("click", c5e1t3);
+					document.getElementById("button3").addEventListener("click", c5e2);
+          document.getElementById("button2").setAttribute("disabled","disabled");
+          document.getElementById("button2").style.cursor = "not-allowed";
+          document.getElementById("button3").setAttribute("disabled","disabled");
+          document.getElementById("button3").style.cursor = "not-allowed";
+        }
+
+				function c5e2(){
+					// change text based on Elmaan's response
+          document.getElementById("text").innerHTML = "The monster stands before you, with multiple tabs open on his computer, each one downloading or streaming a different movie. Now that you see the source of lag before you, you <use your weapon and fail>, the bug is too powerful. You need to do something to stop the bug but what?";
+          document.getElementById("button2").removeAttribute("disabled");
+          document.getElementById("button2").style.cursor = "pointer";
+          document.getElementById("button3").removeAttribute("disabled");
+          document.getElementById("button3").style.cursor = "pointer";
+					document.getElementById("button1").innerText= "You give up";
+					document.getElementById("button2").innerText= "You cry";
+					document.getElementById("button3").innerText= "You run a troubleshooter";
+					document.getElementById("button1").removeEventListener("click", c5e2);
+					document.getElementById("button1").addEventListener("click", gameOver);
+					document.getElementById("button2").removeEventListener("click", c5e2);
+					document.getElementById("button2").addEventListener("click", gameOver);
+					document.getElementById("button3").removeEventListener("click", c5e2);
+					document.getElementById("button3").addEventListener("click", c5e2t1);
+				}
+
+        function c5e2t1() {
+          document.getElementById("text").innerHTML = "You run the troubleshooter as a last attempt, before the bug could reach you, your weapon receives a new patch and you are filled with power. Using this newly found power you finally destroy the bug, freeing up the bandwidth throughout the kingdom. You did it! You saved the day.";
+          document.getElementById("button1").innerText= "Next";
+          document.getElementById("button2").innerText= "N/A";
+					document.getElementById("button3").innerText= "N/A";
+          document.getElementById("button2").setAttribute("disabled","disabled");
+          document.getElementById("button2").style.cursor = "not-allowed";
+          document.getElementById("button3").setAttribute("disabled","disabled");
+          document.getElementById("button3").style.cursor = "not-allowed";
+          document.getElementById("button1").removeEventListener("click", gameOver);
+					document.getElementById("button1").addEventListener("click", c5e2t2);
+        }
+
+        function c5e2t2() {
+          document.getElementById("text").innerHTML = "You return home a hero, the streets are filled with parades as everyone showers you with praise. The crowd makes way as the king approaches you, he gets down on his knees causing everyone to gasp “You have saved me and this kingdom, we can never thank you enough and so I shall bestow you with the greatest prize from my personal treasury!”";
+          document.getElementById("button1").removeEventListener("click", c5e2t2);
+					document.getElementById("button1").addEventListener("click", kingReward);
+        }
+
+				function kingReward(){
+					// change text based on Elmaan's response
+          document.getElementById("text").innerHTML = "The king opens up a giant chest using three locks that had to be carefully opened at the same time, you are filled with anticipation as you await your just reward. “Behold!” The great reward is...";
+					document.getElementById("button1").innerText= "Money!";
+					document.getElementById("button2").innerText= "A legendary weapon!";
+					document.getElementById("button3").innerText= "Dragon eggs!";
+          document.getElementById("button2").removeAttribute("disabled");
+          document.getElementById("button2").style.cursor = "pointer";
+          document.getElementById("button3").removeAttribute("disabled");
+          document.getElementById("button3").style.cursor = "pointer";
+					document.getElementById("button1").removeEventListener("click", kingReward);
+					document.getElementById("button2").removeEventListener("click", gameOver);
+					document.getElementById("button3").removeEventListener("click", c5e2t1);
+          document.getElementById("button1").addEventListener("click", theEnd);
+          document.getElementById("button2").addEventListener("click", theEnd);
+          document.getElementById("button3").addEventListener("click", theEnd);
+				}
+
+        function theEnd() {
+          document.getElementById("text").innerHTML = "It’s a ridiculous inflatable swan thing! Congratulations Hero!";
+          document.getElementById("button1").innerText= "Thanks for Playing";
+          document.getElementById("button2").style.visibility = "hidden";
+          document.getElementById("button3").style.visibility = "hidden";
+        }
+
+        function gameOver() {
+          document.getElementById('art').style.backgroundImage="url(img/test.jpg)";
+          //await sleep(5000);
+          window.location.reload(true);
+        }
+			</script>
+  </body>
+</html>

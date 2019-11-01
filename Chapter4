@@ -1,0 +1,110 @@
+function c4t1(){
+					document.getElementById("button3").removeAttribute("disabled");
+          document.getElementById("button3").style.cursor = "pointer";
+					if(armour == "hackShirt"){
+						document.getElementById("text").innerHTML = "The fire elemental bows before you “I applaud you for your great fashion sense. I am " + fireElem + " , you may continue your journey.” The fire elemental nods towards the dock “I recommend you take the carpet friend.”";
+						document.getElementById("button2").innerText= "Next";
+						document.getElementById("button3").style.visibility = "hidden";
+						document.getElementById("button1").style.visibility = "hidden";
+						document.getElementById("button1").removeEventListener("click", c4t1);
+						document.getElementById("button2").removeEventListener("click", c4t1);
+						document.getElementById("button3").removeEventListener("click", c4t1);
+						document.getElementById("button2").addEventListener("click", c4_3);
+					}
+					else{
+						document.getElementById("text").innerHTML ="You approach the elemental and get ready for battle. “HALT! I am " + fireElem + ", by the order of the Bug you will not continue further.” You consider the next course of action, this is a dangerous opponent that will require a great deal of skill, wit and ingenuity to defeat it."
+						document.getElementById("button1").innerText= "You hug it (Terrible idea really)";
+						document.getElementById("button2").innerText= "You huff and puff and blow";
+						document.getElementById("button3").innerText= "You attack the elemental";
+						document.getElementById("button1").removeEventListener("click", c4t1);
+						document.getElementById("button1").addEventListener("click", c4_1);
+						document.getElementById("button2").removeEventListener("click", c4t1);
+						document.getElementById("button2").addEventListener("click", c4t2);
+						document.getElementById("button3").removeEventListener("click", c4t1);
+						document.getElementById("button3").addEventListener("click", c4_2);
+					}
+				}
+				function c4_1(){
+					document.getElementById("text").innerHTML = "You have decided to hug something that is made of fire. You burn yourself and now have to deal with the pain of your bad decision making.";
+					document.getElementById("button1").setAttribute("disabled","disabled");
+					document.getElementById("button1").style.cursor = "not-allowed";
+					document.getElementById("button1").removeEventListener("click", c4_1);
+				}
+				
+				function c4_2(){
+					document.getElementById("text").innerHTML ="That did not go as planned, now the fire elemental is approaching you. “You will pay for your insolence.”";
+					document.getElementById("button3").setAttribute("disabled","disabled");
+					document.getElementById("button3").style.cursor = "not-allowed";
+					document.getElementById("button3").removeEventListener("click", c4_2);
+				}
+				
+				function c4t2(){
+					document.getElementById("button2").innerText= "Next";
+					document.getElementById("button3").style.visibility = "hidden";
+					document.getElementById("button1").style.visibility = "hidden";
+					document.getElementById("text").innerHTML = "You huff and puff and blow against the fire elemental. Just as you had planned, the fire elemental goes out and you mentally pat yourself on the back. Onwards!";
+					document.getElementById("button2").removeEventListener("click", c4t2);
+					document.getElementById("button2").addEventListener("click", c4_3);
+					
+				}
+				
+				function c4_3(){
+					document.getElementById("button1").removeAttribute("disabled");
+					document.getElementById("button1").style.cursor = "pointer";
+					document.getElementById("button3").removeAttribute("disabled");
+					document.getElementById("button3").style.cursor = "pointer";
+					document.getElementById("button3").style.visibility = "visible";
+					document.getElementById("button1").style.visibility = "visible";
+					document.getElementById("text").innerHTML = "There are many options for how you can get across this river. You see a beautifully decorated carpet on the floor. There is also a perfect copy of the titanic with a sign post in front of it reading ‘Completely unsinkable, will never sink, definitely the right choice.’ The final option is to just swim in the lava but that’s crazy right? I shouldn’t have even mentioned it. You choose...";
+					document.getElementById("button1").innerText= "A carpet";
+					document.getElementById("button2").innerText= "The Unisinkable Titanic";
+					document.getElementById("button3").innerText= "Swimming(Don't pick this)";
+					document.getElementById("button1").removeEventListener("click", c4_3);
+					document.getElementById("button1").addEventListener("click", c4t3);
+					document.getElementById("button2").removeEventListener("click", c4_3);
+					document.getElementById("button2").addEventListener("click", c4_4);
+					document.getElementById("button3").removeEventListener("click", c4_3);
+					document.getElementById("button3").addEventListener("click", c4t4);
+				}
+				
+				function c4t3(){
+					document.getElementById("text").innerHTML = "You sit on the carpet for a bit and … nothing happens. You almost decide to get up when you suddenly find yourself start floating, seems you picked a flying carpet. The carpet then heads straight to the volcano.";
+					document.getElementById("button2").innerText= "Next";
+					document.getElementById("button3").style.visibility = "hidden";
+					document.getElementById("button1").style.visibility = "hidden";
+					document.getElementById("button1").removeEventListener("click", c4t3);
+					document.getElementById("button2").addEventListener("click", c5e1);
+					//make visible in 5
+				}
+				
+				function c4_4(){
+					document.getElementById("text").innerHTML = "You are having a grand time exploring the titanic as it sails across the lava without any problem, you stand on deck and watch on when you suddenly spot something that has to be an illusion. There is an iceberg in the lava river. Somehow it has not melted from the heat.";
+					document.getElementById("button1").innerText= "Sink";
+					document.getElementById("button2").innerText= "Descend";
+					document.getElementById("button3").innerText= "Submerge";
+					document.getElementById("button1").addEventListener("click", c4t5);
+					document.getElementById("button2").removeEventListener("click", c4_4);
+					document.getElementById("button2").addEventListener("click", c4t5);
+					document.getElementById("button3").addEventListener("click", c4t5);
+				}
+				
+				function c4t5(){
+					document.getElementById("text").innerHTML ="The unthinkable has come to pass! The titanic is sinking and you have to escape. Looking around you see the carpet that was at the docks. You sit on it and and close your eyes. As you make peace with your death, you start to feel air rushing against your face. You look around to find out the carpet is magic and flying towards the volcano!";
+					document.getElementById("button2").innerText= "Next";
+					document.getElementById("button3").style.visibility = "hidden";
+					document.getElementById("button1").style.visibility = "hidden";
+					document.getElementById("button2").addEventListener("click", c5e1);
+					document.getElementById("button1").removeEventListener("click", c4t5);
+					document.getElementById("button2").removeEventListener("click", c4t5);
+					document.getElementById("button3").removeEventListener("click", c4t5);
+				}
+				function c4t4(){
+					document.getElementById("text").innerHTML ="You jump into the lava and instead of meeting a horrible death, you paddle along the lava. As unbelievable as it seems, you have impressed the spirit of the lake with your recklessness and have been blessed with immunity to lava. You swim your way to the volcano with renewed vigor.";
+					document.getElementById("button2").innerText= "Next";
+					document.getElementById("button3").style.visibility = "hidden";
+					document.getElementById("button1").style.visibility = "hidden";
+					document.getElementById("button2").addEventListener("click", c5e1);
+					document.getElementById("button1").removeEventListener("click", c4t4);
+					document.getElementById("button2").removeEventListener("click", c4t4);
+					document.getElementById("button3").removeEventListener("click", c4t4);
+				}

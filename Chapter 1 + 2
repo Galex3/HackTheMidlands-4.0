@@ -1,0 +1,345 @@
+                var homeTown = "nowhere";
+				var king =  "Richard the pussy hearted";
+				var bountyHunter = "Daddy";
+				var town2 = "Selly Oak";
+				var captain = "Gingerbeard";
+				var fireElem = "Ragnaros";
+				var weapon = '';
+				var armour = '';
+				var transportation = '';
+				var isAlly = false;
+
+        
+				document.getElementById("button1").addEventListener("click", c1t1);
+				document.getElementById("button2").addEventListener("click", c1t1);
+				document.getElementById("button3").addEventListener("click", c1t1);
+
+        function c1t1(){
+          document.getElementById("text").innerHTML= "King "+king+" was kind and loved by all, but alas he was a fierce competitive gamer. When the kingdom was cursed with lag, the king was filled with rage and taxes reached an all time high, as the king tried to upgrade his internet package.";
+					document.getElementById("button1").removeEventListener("click", c1t1);
+					document.getElementById("button1").addEventListener("click", c1e1);
+					document.getElementById("button2").removeEventListener("click", c1t1);
+					document.getElementById("button2").addEventListener("click", c1e1);
+					document.getElementById("button3").removeEventListener("click", c1t1);
+					document.getElementById("button3").addEventListener("click", c1e1); 
+        }
+
+				function c1e1(){
+          document.getElementById("text").innerHTML="As an adventurer, you decide to take it upon yourself to quest out into the world and slay the evil beast. This is because you...";
+					document.getElementById("button1").innerText= "Want to save the kingdom!";
+					document.getElementById("button2").innerText= "Want to have a good internet connection";
+					document.getElementById("button3").innerText= "Want to get rewarded by the king";
+					document.getElementById("button1").removeEventListener("click", c1e1);
+					document.getElementById("button1").addEventListener("click", c1e2);
+					document.getElementById("button2").removeEventListener("click", c1e1);
+					document.getElementById("button2").addEventListener("click", c1e2);
+					document.getElementById("button3").removeEventListener("click", c1e1);
+					document.getElementById("button3").addEventListener("click", c1e2);
+				}
+        
+        function c1e2(){
+          document.getElementById("text").innerHTML="It’s time to prepare for your quest. Like any good adventurer, you will need weapon, armour and a way to get around. Let’s start with your weapon of choice";
+					document.getElementById("button1").innerText= "A Sword";
+					document.getElementById("button2").innerText= "A Gun";
+					document.getElementById("button3").innerText= "Confidence";
+					document.getElementById("button1").removeEventListener("click", c1e2);
+					document.getElementById("button1").addEventListener("click", c1t2_1);
+					document.getElementById("button2").removeEventListener("click", c1e2);
+					document.getElementById("button2").addEventListener("click", c1t2_2);
+					document.getElementById("button3").removeEventListener("click", c1e2);
+					document.getElementById("button3").addEventListener("click", c1t2_3);
+				}
+        
+        function c1t2_1(){
+          weapon = "a sword";
+          document.getElementById("button1").innerText= "Next";
+					document.getElementById("button2").innerText= "Next";
+					document.getElementById("button3").innerText= "Next";
+          document.getElementById("text").innerHTML= "You used to be part of the army, hopefully your training will pay off against the beast.";
+					document.getElementById("button1").removeEventListener("click", c1t2_1);
+					document.getElementById("button1").addEventListener("click", c1e3);
+					document.getElementById("button2").removeEventListener("click", c1t2_1);
+					document.getElementById("button2").addEventListener("click", c1e3);
+					document.getElementById("button3").removeEventListener("click", c1t2_1);
+					document.getElementById("button3").addEventListener("click", c1e3);
+        }
+        
+        function c1t2_2(){
+          weapon = "a gun";
+          document.getElementById("button1").innerText= "Next";
+					document.getElementById("button2").innerText= "Next";
+					document.getElementById("button3").innerText= "Next";
+          document.getElementById("text").innerHTML= "Who needs swords and spears when you have guns right?";
+					document.getElementById("button1").removeEventListener("click", c1t2_1);
+					document.getElementById("button1").addEventListener("click", c1e3);
+					document.getElementById("button2").removeEventListener("click", c1t2_1);
+					document.getElementById("button2").addEventListener("click", c1e3);
+					document.getElementById("button3").removeEventListener("click", c1t2_1);
+					document.getElementById("button3").addEventListener("click", c1e3);
+        }
+        
+        function c1t2_3(){
+          weapon = "your confidence";
+          document.getElementById("text").innerHTML= "A bold choice, who needs weapons when you’ve got the heart of an adventurer";
+          document.getElementById("button1").innerText= "Next";
+					document.getElementById("button2").innerText= "Next";
+					document.getElementById("button3").innerText= "Next";
+					document.getElementById("button1").removeEventListener("click", c1t2_1);
+					document.getElementById("button1").addEventListener("click", c1e3);
+					document.getElementById("button2").removeEventListener("click", c1t2_1);
+					document.getElementById("button2").addEventListener("click", c1e3);
+					document.getElementById("button3").removeEventListener("click", c1t2_1);
+					document.getElementById("button3").addEventListener("click", c1e3);
+        }
+
+				function c1e3(){
+          document.getElementById("text").innerHTML= "With your weapon ready, you ponder on what to wear on this adventure";
+					document.getElementById("button1").innerText= "Heavy Plate Armour";
+					document.getElementById("button2").innerText= "BBQ Apron";
+					document.getElementById("button3").innerText= "Hack The Midlands 4.0 T-shirt";
+					document.getElementById("button1").removeEventListener("click", c1e3);
+					document.getElementById("button1").addEventListener("click", c1e4);
+          document.getElementById("button1").addEventListener("click", function setHeavy(){armour = "Heavy"});
+					document.getElementById("button2").removeEventListener("click", c1e3);
+					document.getElementById("button2").addEventListener("click", c1e4);
+          document.getElementById("button1").addEventListener("click", function setApron(){armour = "Apron"});
+					document.getElementById("button3").removeEventListener("click", c1e3);
+					document.getElementById("button3").addEventListener("click", c1e4);
+          document.getElementById("button1").addEventListener("click", function setMidlands(){armour = "hackShirt"});
+				}
+
+				function c1e4(){
+					document.getElementById("text").innerHTML= "Almost ready, now for your choice of travel on your mission. You decide on...";
+					document.getElementById("button1").innerText= "Walking";
+					document.getElementById("button2").innerText= "Ride your steed";
+					document.getElementById("button3").innerText= "T.A.R.D.I.S";
+					document.getElementById("button1").removeEventListener("click", c1e4);
+					document.getElementById("button1").addEventListener("click", c1t3_1);
+					document.getElementById("button2").removeEventListener("click", c1e4);
+					document.getElementById("button2").addEventListener("click", c1t3_2);
+					document.getElementById("button3").removeEventListener("click", c1e4);
+					document.getElementById("button3").addEventListener("click", c1t3_3);
+				}
+        
+        function c1t3_1(){
+          transportation = "walking";
+					document.getElementById("text").innerHTML= "You don’t know what awaits you on your trip, walking gives you the versatility to go through any path.";
+					document.getElementById("button1").innerText= "Next";
+					document.getElementById("button2").innerText= "Next";
+					document.getElementById("button3").innerText= "Next";
+					document.getElementById("button1").removeEventListener("click", c1t3_1);
+					document.getElementById("button1").addEventListener("click", c1t4);
+					document.getElementById("button2").removeEventListener("click", c1t3_1);
+					document.getElementById("button2").addEventListener("click", c1t4);
+					document.getElementById("button3").removeEventListener("click", c1t3_1);
+					document.getElementById("button3").addEventListener("click", c1t4);
+				}
+        
+        function c1t3_2(){
+          transportation = "horse";
+					document.getElementById("text").innerHTML= "You and <name of horse> have been on many journeys, they will surely be a great asset on this quest.";
+					document.getElementById("button1").innerText= "Next";
+					document.getElementById("button2").innerText= "Next";
+					document.getElementById("button3").innerText= "Next";
+					document.getElementById("button1").removeEventListener("click", c1t3_2);
+					document.getElementById("button1").addEventListener("click", c1t4);
+					document.getElementById("button2").removeEventListener("click", c1t3_2);
+					document.getElementById("button2").addEventListener("click", c1t4);
+					document.getElementById("button3").removeEventListener("click", c1t3_2);
+					document.getElementById("button3").addEventListener("click", c1t4);
+				}
+        
+        function c1t3_3(){
+					document.getElementById("text").innerHTML= "The moment you step into the tardis it starts to malfunction and you find yourself transported. Shaking off your headache you notice that you are back to the beggining of the game!";
+					document.getElementById("button1").innerText= "What?";
+					document.getElementById("button2").innerText= "Why?";
+					document.getElementById("button3").innerText= "How?";
+					document.getElementById("button1").removeEventListener("click", c1t3_3);
+					document.getElementById("button1").addEventListener("click", tardis);
+					document.getElementById("button2").removeEventListener("click", c1t3_3);
+					document.getElementById("button2").addEventListener("click", tardis);
+					document.getElementById("button3").removeEventListener("click", c1t3_3);
+					document.getElementById("button3").addEventListener("click", tardis);
+				}
+        
+        function tardis(){
+					document.getElementById("text").innerHTML= "The T.A.R.D.I.S is an unpredictable mode of travel (but really it’s because it would make the game one chapter long) Just pick something else.";
+					document.getElementById("button1").innerText= "Walking";
+					document.getElementById("button2").innerText= "Ride our steed";
+					document.getElementById("button3").innerText= "N/A";
+					document.getElementById("button1").removeEventListener("click", tardis);
+					document.getElementById("button1").addEventListener("click", c1t3_1);
+					document.getElementById("button2").removeEventListener("click", tardis);
+					document.getElementById("button2").addEventListener("click", c1t3_2);
+				}
+        
+        function c1t4(){
+					document.getElementById("text").innerHTML= "You have everything you need and have mentally prepared for the trip. You start your adventure to the town of "+town2+" to get directions to the monster’s lair. The villagers of "+homeTown+" wish you luck as you go on your way.";
+					document.getElementById("button1").innerText= "Next";
+					document.getElementById("button2").innerText= "Next";
+					document.getElementById("button3").innerText= "Next";
+					document.getElementById("button1").removeEventListener("click", c1t4);
+					document.getElementById("button1").addEventListener("click", c2t1);
+					document.getElementById("button2").removeEventListener("click", c1t4);
+					document.getElementById("button2").addEventListener("click", c2t1);
+					document.getElementById("button3").removeEventListener("click", c1t4);
+					document.getElementById("button3").addEventListener("click", c2t1);
+				}
+
+        function c2t1(){
+					document.getElementById("text").innerHTML= "On the road to "+town2+", you spot a rider coming towards you in the distance. You slow down and get ready for battle. You never know who’s hostile after all.";
+					document.getElementById("button1").innerText= "Next";
+					document.getElementById("button2").innerText= "Next";
+					document.getElementById("button3").innerText= "Next";
+					document.getElementById("button1").removeEventListener("click", c2t1);
+					document.getElementById("button1").addEventListener("click", c2t2);
+					document.getElementById("button2").removeEventListener("click", c2t1);
+					document.getElementById("button2").addEventListener("click", c2t2);
+					document.getElementById("button3").removeEventListener("click", c2t1);
+					document.getElementById("button3").addEventListener("click", c2t2);
+				}
+        
+        function c2t2(){
+					document.getElementById("text").innerHTML= "The rider stops a few metres before you and dismounts his steed, they are dressed in full plate armour, a difficult foe to deal with. The rider declares that they are "+bountyHunter+" and have been hired by the Bug to stop the prophecy from coming true.";
+					document.getElementById("button1").innerText= "“What prophecy?”";
+					document.getElementById("button2").innerText= "“Come at me bro”";
+					document.getElementById("button3").innerText= "“Prepare to be smited villainous scum!”";
+					document.getElementById("button1").removeEventListener("click", c2t2);
+					document.getElementById("button1").addEventListener("click", c2e1);
+					document.getElementById("button2").removeEventListener("click", c2t2);
+					document.getElementById("button2").addEventListener("click", c2e1);
+					document.getElementById("button3").removeEventListener("click", c2t2);
+					document.getElementById("button3").addEventListener("click", c2e1);
+				}
+        
+				function c2e1(){
+					document.getElementById("text").innerHTML=  bountyHunter + " lets out a cruel laugh as they pull out an oversized sword. “I have not come to talk, now get ready to fight.” Looks like you need to disarm the situation, you...";
+					document.getElementById("button1").innerText= "Fight the bounty hunter.";
+					document.getElementById("button2").innerText= "Charm the bounty hunter.";
+					document.getElementById("button3").innerText= "Intimidate the bounty hunter.";
+					document.getElementById("button1").removeEventListener("click", c2e1);
+					document.getElementById("button1").addEventListener("click", c2e1_1);
+					document.getElementById("button2").removeEventListener("click", c2e1);
+					document.getElementById("button2").addEventListener("click", c2e1_1);
+					document.getElementById("button3").removeEventListener("click", c2e1);
+					document.getElementById("button3").addEventListener("click", c2e1_2);
+				}
+        
+        function c2e1_t(){
+					document.getElementById("text").innerHTML="You don’t back out of a fight, they might have plate armour but you have"+weapon+". After an epic battle (that couldn’t be added due to budget cuts) you emerge victorious and ready to continue your adventure.";
+					document.getElementById("button1").innerText= "Next";
+					document.getElementById("button2").innerText= "Next";
+					document.getElementById("button3").innerText= "Next";
+					document.getElementById("button1").removeEventListener("click", c2e1_t);
+					document.getElementById("button1").addEventListener("click", c3t1);
+					document.getElementById("button2").removeEventListener("click", c2e1_t);
+					document.getElementById("button2").addEventListener("click", c3t1);
+					document.getElementById("button3").removeEventListener("click", c2e1_t);
+					document.getElementById("button3").addEventListener("click", c3t1);
+				}
+        
+        function c2e1_1(){
+          isAlly = true;
+					document.getElementById("text").innerHTML="You prefer to talk your way out of a fight, there are many ways to persuade the bounty hunter. You decide to...";
+					document.getElementById("button1").innerText= "Ask them out on a date";
+					document.getElementById("button2").innerText= "Invite them out for a pint";
+					document.getElementById("button3").innerText= "Offer to share a pizza";
+					document.getElementById("button1").removeEventListener("click", c2e1_1);
+					document.getElementById("button1").addEventListener("click", c2e1_1t1);
+					document.getElementById("button2").removeEventListener("click", c2e1_1);
+					document.getElementById("button2").addEventListener("click", c2e1_1t2);
+					document.getElementById("button3").removeEventListener("click", c2e1_1);
+					document.getElementById("button3").addEventListener("click", c2e1_1t3);
+				}
+        
+        function c2e1_1t1(){
+					document.getElementById("text").innerHTML="Love conquers all! "+bountyHunter+" is shocked at first but they puts their sword away and the two of you go out on a romantic moonlit dinner by the lake. The bounty hunter then decides to accompany you on your travels to keep you safe. You have gained a powerful new ally.";
+					document.getElementById("button1").innerText= "Next";
+					document.getElementById("button2").innerText= "Next"; 
+					document.getElementById("button3").innerText= "Next";
+					document.getElementById("button1").removeEventListener("click", c2e1_1t1);
+					document.getElementById("button1").addEventListener("click", c3t1);
+					document.getElementById("button2").removeEventListener("click", c2e1_1t1);
+					document.getElementById("button2").addEventListener("click", c3t1);
+					document.getElementById("button3").removeEventListener("click", c2e1_1t1);
+					document.getElementById("button3").addEventListener("click", c3t1);
+				}
+        
+        function c2e1_1t2(){
+					document.getElementById("text").innerHTML= bountyHunter + "lets out a genuine laugh before they realize you are not joking. They shrug and the two of you head off to the nearby pub, sharing stories and building a friendship. They decide they cannot kill off their new friend and join you on your quest, you have received a powerful ally!";
+					document.getElementById("button1").innerText= "Next";
+					document.getElementById("button2").innerText= "Next";
+					document.getElementById("button3").innerText= "Next";
+					document.getElementById("button1").removeEventListener("click", c2e1_1t2);
+					document.getElementById("button1").addEventListener("click", c3t1);
+					document.getElementById("button2").removeEventListener("click", c2e1_1t2);
+					document.getElementById("button2").addEventListener("click", c3t1);
+					document.getElementById("button3").removeEventListener("click", c2e1_1t2);
+					document.getElementById("button3").addEventListener("click", c3t1);
+				}
+        
+        function c2e1_1t3(){
+					document.getElementById("text").innerHTML="You pull out a pizza box and reveal it in all its glory, "+bountyHunter+" brings down their blade but instead of cutting you down, they cut out two slices of pizza. The bounty hunter is grateful as his journey to find you made him very hungry. The bounty hunter thanks you for your generosity and vows to pay you back, you have gained a powerful ally.";
+					document.getElementById("button1").innerText= "Next";
+					document.getElementById("button2").innerText= "Next";
+					document.getElementById("button3").innerText= "Next";
+					document.getElementById("button1").removeEventListener("click", c2e1_1t3);
+					document.getElementById("button1").addEventListener("click", c3t1);
+					document.getElementById("button2").removeEventListener("click", c2e1_1t3);
+					document.getElementById("button2").addEventListener("click", c3t1);
+					document.getElementById("button3").removeEventListener("click", c2e1_1t3);
+					document.getElementById("button3").addEventListener("click", c3t1);
+				}
+        
+        function c2e1_2(){
+					document.getElementById("text").innerHTML="You can be a scary individual when you want to be, you decide to scare this bounty hunter off for good!";
+					document.getElementById("button1").innerText= "You point out that as the protagonist you have an inherent advantage";
+					document.getElementById("button2").innerText= "You flex your muscles menacingly";
+					document.getElementById("button3").innerText= "You bribe them";
+					document.getElementById("button1").removeEventListener("click", c2e1_2);
+					document.getElementById("button1").addEventListener("click", c2e1_2t1);
+					document.getElementById("button2").removeEventListener("click", c2e1_2);
+					document.getElementById("button2").addEventListener("click", c2e1_2t2);
+					document.getElementById("button3").removeEventListener("click", c2e1_2);
+					document.getElementById("button3").addEventListener("click", c2e1_2t3);
+				}
+        
+        function c2e1_2t1(){
+					document.getElementById("text").innerHTML= bountyHunter+" is confused at first but then he looks around him, finally noticing that there were borders. The bounty hunter drops to his knees as he starts having an existential crisis about being in a game. Not the intended effect but it works nonetheless! You can continue your journey!";
+					document.getElementById("button1").innerText= "Next";
+					document.getElementById("button2").innerText= "Next";
+					document.getElementById("button3").innerText= "Next";
+					document.getElementById("button1").removeEventListener("click", c2e1_2t1);
+					document.getElementById("button1").addEventListener("click", c3t1);
+					document.getElementById("button2").removeEventListener("click", c2e1_2t1);
+					document.getElementById("button2").addEventListener("click", c3t1);
+					document.getElementById("button3").removeEventListener("click", c2e1_2t1);
+					document.getElementById("button3").addEventListener("click", c3t1);
+				}
+        
+        function c2e1_2t2(){
+					document.getElementById("text").innerHTML= bountyHunter+" accepts your challenge, flexing back at you. You both stand there flexing your muscles until the bounty hunter finally tired out. After admitting their defeat, they bow their head in shame and leave. No one out flexes you!";
+					document.getElementById("button1").innerText= "Next";
+					document.getElementById("button2").innerText= "Next";
+					document.getElementById("button3").innerText= "Next";
+          
+					document.getElementById("button1").removeEventListener("click", c2e1_2t2);
+					document.getElementById("button1").addEventListener("click", c3t1);
+					document.getElementById("button2").removeEventListener("click", c2e1_2t2);
+					document.getElementById("button2").addEventListener("click", c3t1);
+					document.getElementById("button3").removeEventListener("click", c2e1_2t2);
+					document.getElementById("button3").addEventListener("click", c3t1);
+				}
+        
+        function c2e1_2t3(){
+					document.getElementById("text").innerHTML= "You sift through your pockets, looking for money to give to the bounty hunter when you suddenly realize that you have no money! Alas, it is the life of a student.";
+          document.getElementById("button3").setAttribute("disabled","disabled");
+					document.getElementById("button3").style.cursor = "not-allowed"; //remember to remove the disabled attribute in next chapter
+					document.getElementById("button1").innerText= "You point out that as the protagonist you have an inherent advantage";
+					document.getElementById("button2").innerText= "You flex your muscles menacingly";
+					document.getElementById("button3").innerText= "You bribe them";
+					document.getElementById("button1").removeEventListener("click", c2e1_2t3);
+					document.getElementById("button1").addEventListener("click", c2e1_2t1);
+					document.getElementById("button2").removeEventListener("click", c2e1_2t3);
+					document.getElementById("button2").addEventListener("click", c2e1_2t2);
+				}
